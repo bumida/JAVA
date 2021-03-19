@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Board">
+
+	<delete id="deleteOneReply" parameterType="_int">
+		DELETE FROM BOARD_REPLY WHERE REPLY_NUM = ${reply_num}
+	</delete>
+	
+	<delete id="deleteReply" parameterType="_int">
+		DELETE FROM BOARD_REPLY WHERE BOARD_NUM = ${board_num}
+	</delete>
+
+	<select id="getReply" parameterType="_int" resultType="replyBean">
+		SELECT * FROM BOARD_REPLY WHERE BOARD_NUM = ${board_num}
+		ORDER BY REPLY_NUM DESC
+	</select>
+	
+	<insert id="insertReply" parameterType="replyBean">
+		INSERT INTO BOARD_REPLY
+		VALUES(
+			REPLY_SEQ.NEXTVAL, ${board_num}, #{member_id}, #{reply_contents}
+		)
+	</insert>
+	
+	
+
+	<insert id="insertBoard" parameterType="boardBean">
+		INSERT INTO BOARD
+		VALUES(
+			BOARD_SEQ.NEXTVAL, #{board_title}, #{board_contents}, #{member_id}, SYSDATE, 0
+		)
+	</insert>
+	
+	<delete id="deleteBoard" parameterType="_int">
+		DELETE FROM BOARD WHERE BOARD_NUM = ${board_num}
+	</delete>
+
+	<select id="boardCnt" resultType="_int">
+		SELECT COUNT(*) FROM BOARD
+	</select>
+	
+	<select id="listAll" parameterType="map" resultType="boardBean">
+		SELECT * FROM
+			(SELECT ROWNUM R, D.* FROM 
+				(SELECT * FROM BOARD ORDER BY BOARD_NUM DESC) D) B
+				 WHERE B.R BETWEEN ${startRow} AND ${endRow}
+	</select>
+	
+</mapper>
