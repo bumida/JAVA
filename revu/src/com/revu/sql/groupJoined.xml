@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="GroupJoined">
+	
+	<insert id="joinGroup" parameterType="map">
+		INSERT INTO GROUP_JOINED
+		VALUES(
+			GROUPJOINED_SEQ.NEXTVAL, ${group_num}, #{group_name}, #{member_id}, #{blog_mail}, #{member_name}, #{member_hp}, #{member_zipcode}, #{member_address}, #{member_address_detail}, #{member_address_etc}
+		)
+	</insert>
+
+	<insert id="newGroup" parameterType="map">
+		INSERT INTO GROUP_JOINED
+		VALUES(
+			GROUPJOINED_SEQ.NEXTVAL, ${group_num,jdbcType=VARCHAR}, #{group_name,jdbcType=VARCHAR}, #{member_id,jdbcType=VARCHAR}, #{blog_mail,jdbcType=VARCHAR}, #{member_name,jdbcType=VARCHAR}, #{member_hp,jdbcType=VARCHAR}, #{member_zipcode,jdbcType=VARCHAR}, #{member_address,jdbcType=VARCHAR}, #{member_address_detail,jdbcType=VARCHAR}, #{member_address_etc,jdbcType=VARCHAR}
+		)
+	</insert>
+	
+	<select id="checkAdmin" parameterType="map" resultType="string">
+		SELECT GROUP_ADMIN FROM GROUP_JOINED WHERE MEMBER_ID = #{member_id} AND GROUP_NUM = ${group_num}
+	</select>
+	
+	<select id="getMember" parameterType="map" resultType="groupJoinBean">
+		SELECT * FROM
+			(SELECT ROWNUM MEMBER_ROWNUM, D.* FROM 
+				(SELECT GROUP_JOINED.*, "MEMBER".MEMBER_NAME  
+				FROM GROUP_JOINED INNER JOIN "MEMBER" ON GROUP_JOINED.MEMBER_ID  = "MEMBER".MEMBER_ID 
+				WHERE GROUP_NUM = ${group_num} ORDER BY GROUP_JOINED.MEMBER_ID) D) G
+				 WHERE G.MEMBER_ROWNUM BETWEEN ${endNum} AND ${startNum} ORDER BY MEMBER_ROWNUM
+	</select>
+	
+	<select id="groupJoinCnt" resultType="_int">
+		SELECT COUNT(*) FROM "GROUP_JOINED"
+	</select>
+	
+	
+	
+	<select id="getMemberList" parameterType="_int" resultType="string">
+		SELECT MEMBER_ID FROM GROUP_JOINED WHERE GROUP_NUM = ${group_num}
+	</select>
+	
+	<update id="updateMemberAdmin" parameterType="map">
+		UPDATE GROUP_JOINED
+		SET GROUP_ADMIN = #{group_admin}
+		WHERE MEMBER_ID = #{member_id} AND GROUP_NUM = ${group_num}
+	</update>
+	
+	<select id="memberCheck" parameterType="map" resultType="string">
+		SELECT COUNT(*) FROM GROUP_JOINED WHERE MEMBER_ID=#{member_id} AND GROUP_NUM=${group_num}
+	</select>
+	
+	<delete id="deleteGroupJoin" parameterType="_int">
+		DELETE GROUP_JOINED WHERE GROUP_NUM = ${group_num}
+	</delete>
+	
+	<select id="GroupListAll" parameterType="_int" resultType="groupJoinBean">
+   SELECT * FROM
+			(SELECT ROWNUM R, D.* FROM 
+				(SELECT * FROM "GROUP_JOINED" ORDER BY GROUP_NUM DESC) D) B
+				 WHERE B.R BETWEEN ${startRow} AND ${endRow} 
+   </select>
+   
+   <select id="new_groupJoinList" resultType="groupJoinBean">
+  SELECT * FROM "GROUP_JOINED" ORDER BY GROUP_NUM DESC
+  </select>
+   
+   
+</mapper>

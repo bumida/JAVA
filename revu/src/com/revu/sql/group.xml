@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Group">
+
+
+
+<insert id="newGroup" parameterType="groupBean">
+		INSERT INTO "GROUP"
+		VALUES(
+			GROUP_SEQ.NEXTVAL, #{group_name}, #{group_contents}, #{group_info}, #{group_info_two}, #{group_info_three}, #{member_id},  
+			0, ${member_max}, #{group_img}, #{group_region}, #{group_register_date}, #{group_review_date}, #{group_reviewer_date}, #{group_imgmain}
+		)
+	</insert>
+
+
+  <select id="groupCnt" resultType="_int">
+		SELECT COUNT(*) FROM "GROUP"
+	</select>
+ 
+ <select id="getSeq" resultType="_int">
+       SELECT GROUP_SEQ.CURRAVAL FROM DUAL
+     </select>
+ 
+ <select id="Seq" resultType="_int">
+    SELECT GROUP_SEQ.NEXTVAL FROM DUAL
+    </select>
+ <select id="boardCnt" resultType="_int">
+		SELECT COUNT(*) FROM REPLY
+	</select>
+ 
+ 
+ <delete id="groupDelete" parameterType="_int">
+		DELETE FROM "GROUP" WHERE GROUP_NUM = ${group_num}
+	</delete>
+  
+  <select id="hot_groupList" resultType="groupBean">
+   SELECT * FROM "GROUP" ORDER BY MEMBER_NUM DESC 
+   </select>
+   
+  <select id="new_groupList" resultType="groupBean">
+  SELECT * FROM "GROUP" ORDER BY GROUP_NUM DESC
+  </select>
+  
+  <select id="getGroupMember" parameterType="_int" resultType="String">
+		SELECT GROUP_MEMBER FROM "GROUP" WHERE GROUP_NUM = ${group_num}
+	</select>
+  
+  <select id="getDetail" parameterType="_int" resultType="groupBean">
+		SELECT * FROM "GROUP" WHERE GROUP_NUM = ${group_num}
+	</select>
+  
+  	<select id="getReply" parameterType="_int" resultType="groupReplyBean">
+		SELECT * FROM REPLY WHERE GROUP_NUM = ${group_num}
+		ORDER BY REPLY_NUM DESC
+	</select>
+  	
+  <select id="getGroupinfo" parameterType="_int" resultType="groupBean">
+		SELECT * FROM "GROUP" WHERE GROUP_NUM = ${group_num}
+ </select>
+  
+  <select id="listAll" parameterType="_int" resultType="groupBean">
+   SELECT * FROM
+			(SELECT ROWNUM R, D.* FROM 
+				(SELECT * FROM "GROUP" ORDER BY GROUP_NUM DESC) D) B
+				 WHERE B.R BETWEEN ${startRow} AND ${endRow} 
+   </select>
+   
+   <update id="addMemberNum" parameterType="_int">
+   UPDATE "GROUP" SET MEMBER_NUM = MEMBER_NUM + 1 WHERE GROUP_NUM = ${group_num}
+   </update>
+  <insert id="insertReply" parameterType="groupReplyBean">
+		INSERT INTO REPLY
+		VALUES(
+			REPLY_SEQ.NEXTVAL, ${group_num}, #{member_id}, #{reply_contents}
+		)
+	</insert>
+  
+  <delete id="deleteOneReply" parameterType="_int">
+		DELETE FROM REPLY WHERE REPLY_NUM = ${reply_num}
+	</delete>
+	
+	<delete id="deleteReply" parameterType="_int">
+		DELETE FROM REPLY WHERE GROUP_NUM = ${group_num}
+	</delete>
+  
+  
+   <select id="ReplyCnt" parameterType="_int" resultType="_int">
+	SELECT COUNT(*) FROM REPLY WHERE GROUP_NUM = ${group_num} 
+  </select>
+   
+</mapper>

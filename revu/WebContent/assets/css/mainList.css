@@ -1,0 +1,194 @@
+.latest-posts{
+  background-color: #fff;
+}
+
+.camp_list{
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.camp_list .container{
+  padding: 0;
+}
+.camp_list .list_box{
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  padding: 15px;
+  display: block;
+  float: left;
+  width: calc(25% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-family: 'dotum';
+  background-color: #fff;
+}
+@media screen and (min-width: 992px) and (max-width: 1199px){
+  .camp_list .list_box{
+    width: calc(33% - 20px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .camp_list .list_box{
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .camp_list .list_box{
+    width: calc(100% - 20px);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .camp_list .list_box{
+    width: calc(100% - 20px);
+  }
+}
+.camp_list .list_box:hover .box_img .contents_img{
+  transform: scale(1.1);
+}
+.camp_list .list_box .box_img{
+  position: relative;
+  overflow: hidden;
+}
+.camp_list .list_box .box_img .contents_img{
+  width: 100%;
+  height: 248px;
+  transition: 0.3s;
+}
+.camp_list .list_box .box_img .sns_ico{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.camp_list .list_box .box_img .remain_day, .product_box_left .remain_day{
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  text-align: center;
+  background-color: #61c747;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.camp_list .list_box .box_img .remain_day b, .product_box_left .remain_day b{
+  color: #fff;
+}
+.camp_list .list_box .box_img .remain_day span, .product_box_left .remain_day span{
+  display: block;
+  font-size: 14px;
+}
+.camp_list .list_box .box_title, .product_box_right .box_title{
+  font-weight: bold;
+  font-size: 13px;
+  margin-top: 10px;
+  color: #000;
+}
+.camp_list .list_box .box_desc, .product_box_right .box_desc{
+  width: 100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  color: #7d7d7d;
+  font-size: 13px;
+}
+.camp_list .list_box .box_proc, .product_box_right .box_proc{
+  float: right;
+  font-size: 13px;
+  position: relative;
+  margin-top: 10px;
+  line-height: 1;
+  letter-spacing: -1.5px;
+}
+.camp_list .list_box .box_proc::before, .product_box_right .box_proc::before{
+  content: '';
+  position: absolute;
+  display: block;
+  left: -17px;
+  bottom: 0px;
+  width: 13px;
+  height: 13px;
+  background: url('../img/elements/user.png') no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.camp_list .list_box .box_proc b, .product_box_right .box_proc b{
+  color: #7d7d7d;
+  font-weight: normal;
+}
+.camp_list .list_box .box_proc b strong, .product_box_right .box_proc b strong{
+  /* color: #140C40; */
+  color: #000;
+  font-weight: bold;
+}
+.camp_list .list_box .box_proc span, .product_box_right .box_proc span{
+  color: #7d7d7d;
+}
+.camp_list .list_box .box_proc span strong, .product_box_right .box_proc span strong{
+  font-weight: bold;
+}
+.nes-slider-area{
+  background-color: #ddd;
+  overflow: hidden;
+}
+.nes-slider-area .slick-list{
+  overflow: visible;
+}
+.deadline_list{
+
+}
+.deadline_list .box_img{
+  padding: 0 30px;
+  position: relative;
+
+}
+.deadline_list .box_img .contents_img{
+  width: 100%;
+}
+.deadline_list .box_img .remain_day{
+  position: absolute;
+  right: 0;
+  top: -30px;
+  padding: 5px;
+}
+.deadline_list .box_img .remain_day span{
+  background-color: #000;
+  border-radius: 100px;
+  width: 60px;
+  height: 60px;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.deadline_list .product_text_box{
+  text-align: center;
+  font-family: 'dotum';
+  color: #7d7d7d;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.deadline_list .product_text_box .box_title{
+  font-weight: bold;
+  color: #000;
+}
+.deadline_list .product_text_box .box_desc{
+  margin-bottom: 7px;
+}
+.deadline_list .product_text_box .box_proc{
+  font-size: 13px;
+}
+.deadline_list .product_text_box .box_proc b{
+  color: #7d7d7d;
+  font-weight: normal;
+}
+.deadline_list .product_text_box .box_proc b strong{
+  color: #000;
+}
+.deadline_list .product_text_box .box_proc span{
+
+}
+.deadline_list .product_text_box .box_proc span strong{
+
+}

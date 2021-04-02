@@ -1,0 +1,239 @@
+.my_wrap{
+  padding-top: 1px;
+  overflow: hidden;
+}
+.my_page{
+
+}
+.my_page h2{
+  font-size: 32px;
+}
+.my_page .my_inner{
+
+}
+.my_page .my_inner{
+
+}
+.my_page .my_inner .table_wrap{
+  border: 1px solid #ddd;
+  padding: 20px 30px;
+}
+.my_page .my_inner table{
+  width: 100%;
+}
+.my_page .my_inner table colgroup{
+
+}
+.my_page .my_inner table col{
+
+}
+.my_page .my_inner table tbody{
+  font-size: 14px;
+}
+.my_page .my_inner table tbody tr{
+  border-bottom: 1px solid #ddd;
+}
+.my_page .my_inner table tbody tr th{
+  font-weight: 400;
+  width: 20%;
+  text-align: center;
+}
+.my_page .my_inner table tbody tr td{
+  font-weight: 400;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  line-height: 1;
+}
+.my_page .my_inner table tbody tr .pw input{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.my_page .my_inner table tbody tr .pw input:last-child{
+  margin-bottom: 0;
+}
+.my_page .my_inner table tbody tr td button{
+  width: 300px;
+  height: 45px;
+  background-color: #140C40;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.my_page .my_inner table tbody tr td .certi{
+  width: 150px;
+  height: 35px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.my_page .my_inner table tbody tr td .certi:hover{
+  background-color: #fff;
+  color: #140C40;
+  border: 1px solid #140C40;
+}
+.my_page .my_inner table tbody tr td input{
+  border: 1px solid #ddd;
+  color: #888;
+  font-weight: 300;
+  height: 45px;
+  background-color: #fff;
+  width: 300px;
+  padding: 0 18px;
+}
+.my_page .my_inner table tbody tr td input::placeholder{
+  font-size: 14px;
+}
+.my_page .my_inner table tbody tr td input[disabled]{
+  background-color: #eee;
+}
+.my_page .my_inner table tbody tr .birth div{
+  display: inline-block;
+  line-height: 45px;
+  vertical-align: top;
+  margin-right: 5px;
+  color: #888;
+}
+.my_page .my_inner table tbody tr .birth .birth_day{
+  width: 80px;
+}
+.my_page .my_inner table tbody tr .birth .birth_day.open .list{
+  height: 250px;
+  overflow-y: scroll;
+}
+.my_page .my_inner table tbody tr .birth .year{
+  width: 100px;
+}
+.my_page .my_inner table tbody tr .birth .month{
+
+}
+.my_page .my_inner table tbody tr .birth .day{
+
+}
+.my_page .my_inner table tbody tr .birth .gender.open .list{
+  height: auto;
+  overflow-y: inherit;
+}
+.my_page .my_inner table tbody tr td .nice-select{
+  border: 1px solid #ddd;
+  padding-top: 1px;
+  padding-right: 0;
+  height: 45px;
+}
+.my_page .my_inner table tbody tr td .nice-select::after{
+  right: 10px;
+}
+.my_page .my_inner table tbody tr td .text_area{
+
+}
+.my_page .my_inner table tbody tr td .phone{
+  width: 100px;
+}
+.my_page .my_inner table tbody tr td .check_box{
+  margin-top: 5px;
+  position: relative;
+}
+.my_page .my_inner table tbody tr td .check_box input{
+  width: inherit;
+  height: inherit;
+}
+.my_page .my_inner table tbody tr td .check_box label{
+
+}
+.check_box input[type="checkbox"]{
+  display: none;
+}
+
+.check_box input[type="checkbox"] + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 0;
+}
+.check_box input[type="checkbox"] + label:before {
+  content: ' ';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 14px;
+  margin: -4px 5px 0 0;
+  text-align: center;
+  vertical-align: middle;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.check_box input[type="checkbox"]:checked + label:before {
+  content: '\2714';
+  color: #888;
+}
+.my_page .my_inner .center{
+  text-align: center;
+}
+.my_page .my_inner .center button{
+  width: 100px;
+  height: 45px;
+  background-color: #1f75d9;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.my_page .my_camp_tab{
+
+}
+.my_page .my_camp_tab .my_tab_inner{
+
+}
+.my_page .my_camp_tab .my_tab_inner ul{
+
+}
+.my_page .my_camp_tab .my_tab_inner ul li{
+  float: left;
+  position: relative;
+  z-index: 8;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  border-bottom: none;
+  line-height: 36px;
+  height: 40px;
+  box-sizing: border-box;
+  width: 20%;
+  text-align: center;
+}
+.my_page .my_camp_tab .my_tab_inner ul li.on{
+  z-index: 10;
+  border: 1px solid #252525;
+  border-bottom: none;
+  background-color: #fff;
+}
+.my_page .my_camp_tab .my_tab_inner ul li:nth-child(2){
+  left: -1px;
+}
+.my_page .my_camp_tab .my_tab_inner ul li:nth-child(3){
+  left: -2px;
+}
+.my_page .my_camp_tab .my_tab_inner ul li span{
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+}
+.my_page .my_camp_tab .my_tab_inner .contents{
+  display: none;
+  position: relative;
+  top: -1px;
+  border-top: 1px solid #252525;
+  z-index: 9;
+  padding-top: 30px;
+}
+.my_page .my_camp_tab .my_tab_inner .contents.on{
+  display: block;
+}
+.my_page .my_camp_tab .my_tab_inner .contents .empty_box{
+  font-size: 14px;
+  line-height: 500px;
+  text-align: center;
+}

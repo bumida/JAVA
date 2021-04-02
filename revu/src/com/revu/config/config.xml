@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.revu.app.member.dao.MemberBean" alias="MemberBean"/>
+		<typeAlias type="com.revu.app.board.dao.BoardBean" alias="BoardBean"/>
+		<typeAlias type="com.revu.app.group.dao.GroupBean" alias="GroupBean"/>
+		<typeAlias type="com.revu.app.group.dao.GroupJoinBean" alias="GroupJoinBean"/>
+		<typeAlias type="com.revu.app.group.dao.GroupReplyBean" alias="GroupReplyBean"/>
+		<typeAlias type="com.revu.app.group.dao.FilesBean" alias="filesBean"/>
+		
+	</typeAliases>
+	
+
+
+
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.OracleDriver"/>
+				<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:XE"/>
+				<property name="username" value="hr"/>
+				<property name="password" value="ki0707"/>
+			</dataSource>
+		</environment>
+	</environments> 
+	
+	<mappers>
+		<mapper resource="com/revu/sql/member.xml"/>
+		<mapper resource="com/revu/sql/group.xml"/>
+		<mapper resource="com/revu/sql/board.xml"/>
+	    <mapper resource="com/revu/sql/groupJoined.xml"/>
+	    <mapper resource="com/revu/sql/file.xml"/>
+	</mappers>
+</configuration>

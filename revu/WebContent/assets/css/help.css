@@ -1,0 +1,127 @@
+#container {
+	border-top: 1px solid #eaeaea;
+	margin-top: 0;
+}
+#contents {
+	min-height: 400px;
+	padding: 0 0 60px 0;
+}
+.sub_contents {
+	padding: 40px 0 0 0;
+}
+.sub_content .content{
+	width: 1200px;
+    margin: 0 auto;
+    min-height: 500px;
+    padding: 0;
+}
+.board_zone_sec {
+	position: relative;
+}
+.board_zone_tit {
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    font-size: 16px;
+}
+
+
+.board_zone_tit h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.board_list_table {
+	margin: 0 0 20px 0;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-top: 1px solid #999999;
+    text-align: center;
+}
+.board_list_table .board_tit {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.board_list_table th {
+	padding: 12px 12px 12px 14px;
+    border-bottom: 1px solid #dbdbdb;
+    background: #fbfbfb;
+    font-size: 14px;
+}
+
+
+.board_list_table td {
+	padding: 13px 10px 15px 10px;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.page {
+	display: flex;
+    padding-left: 450px;
+    list-style: none;
+    border-radius: .25rem;
+}
+.page ul {
+	padding: 20px 0 0;
+    text-align: center;
+}
+
+.page li {
+	display: inline-block;
+    min-width: 26px;
+    vertical-align: middle;
+}
+.page .page_on {
+	color: #333;
+	font-weight: bold;
+}
+
+
+.page li.page_on span {
+	font-weight: bold;
+    color: #333;
+    border-radius: 20px;
+}
+.page li span {
+	display: block;
+    padding: 0 !important;
+    height: 30px;
+    width: 30px;
+    color: #888;
+    font-size: 16px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.navigation {
+	margin: 120px 0 30px 0;
+    padding: 10px 200px 10px 10px;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.navigation .navigation_ul {
+	margin-bottom: 0px;
+}
+
+.navigation .navigation_ul > li {
+	margin-right: 50px;
+    display: inline-block;
+}
+
+.navigation .navigation_ul > li > a {
+	font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}

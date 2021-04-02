@@ -1,0 +1,166 @@
+.product_box{
+  font-family: 'dotum';
+  display: flex;
+}
+.product_box .product_box_left{
+  position: relative;
+  flex-basis: 33.33%;
+}
+.product_box .product_box_left .contents_img{
+  width: 100%;
+}
+.product_box .product_box_left .remain_day{
+
+}
+.product_box .product_box_left .remain_day b{
+
+}
+.product_box .product_box_left .remain_day span{
+
+}
+.product_box .product_box_right{
+  flex-basis: 66.66%;
+  box-sizing: border-box;
+  padding-left: 50px;
+}
+.product_box .product_box_right .box_title{
+  font-size: 24px;
+}
+.product_box .product_box_right .box_desc{
+  font-size: 16px;
+}
+.product_box .product_box_right .box_proc{
+  float: none;
+  left: 20px;
+}
+.product_box .product_box_right .box_proc b{
+
+}
+.product_box .product_box_right .box_proc b strong{
+
+}
+.product_box .product_box_right .box_proc span{
+
+}
+.product_box .product_box_right .box_proc span strong{
+
+}
+.product_box .product_box_right .product_term{
+  font-size: 13px;
+  line-height: 1.2;
+  margin-top: 24px;
+}
+.product_box .product_box_right .product_term ul{
+
+}
+.product_box .product_box_right .product_term ul li{
+
+}
+.product_box .product_box_right .product_term ul li span{
+  display: block;
+}
+.product_box .product_box_right .search_widget{
+  margin-top: 32px;
+  width: 50%;
+}
+.product_box .product_box_right .search_widget .boxed-btn{
+  padding: 15px 44px;
+}
+.blog_area{
+
+}
+.blog_area .posts-list{
+
+}
+.blog_area .posts-list .camp_tab{
+  margin-top: 50px;
+}
+.blog_area .posts-list .camp_tab ul{
+
+}
+.blog_area .posts-list .camp_tab ul li{
+  float: left;
+  position: relative;
+  z-index: 9;
+}
+.blog_area .posts-list .camp_tab ul li.on{
+  z-index: 10;
+}
+.blog_area .posts-list .camp_tab ul li:nth-child(2){
+  left: -1px;
+}
+.blog_area .posts-list .camp_tab ul li span{
+  position: relative;
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #000;
+  padding: 5px;
+  width: 150px;
+  text-align: center;
+}
+.blog_area .posts-list .camp_tab ul li span b{
+  color: #61c747;
+}
+.blog_area .posts-list .camp_tab ul li.on span{
+  border: 1px solid #000;
+  border-bottom: 1px solid #fff;
+}
+.blog_area .posts-list .camp_tab .camp_contents{
+  display: none;
+  border-top: 1px solid #000;
+  position: relative;
+  top: -1px;
+}
+.blog_area .posts-list .camp_tab .camp_contents.on{
+  display: block;
+}
+.blog_area .posts-list .camp_tab .blog_details{
+
+}
+.blog_area .posts-list .camp_tab .comments-area{
+  margin-top: 0;
+}
+.blog_right_sidebar{
+
+}
+.blog_right_sidebar .popular_post_widget{
+  padding-top: 0;
+}
+.blog_right_sidebar .popular_post_widget .h3{
+
+}
+.blog_right_sidebar .popular_post_widget .popular_camp_box{
+
+}
+.blog_right_sidebar .popular_post_widget .popular_camp_box a{
+  display: flex;
+  margin-bottom: 15px;
+}
+.blog_right_sidebar .popular_post_widget .popular_camp_box a:last-child{
+  margin-bottom: 0;
+}
+.blog_right_sidebar .popular_post_widget .popular_camp_box a img{
+  width: 100px;
+  height: 100px;
+}
+.blog_right_sidebar .popular_post_widget .popular_camp_box a div{
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.blog_right_sidebar .popular_post_widget .popular_camp_box a div p{
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  color: #2d2d2d;
+  font-size:16px;
+  margin-bottom: 0;
+}
+.blog_right_sidebar .popular_post_widget .popular_camp_box a div .title{
+
+}
+.blog_right_sidebar .popular_post_widget .popular_camp_box a div .desc{
+  font-size: 14px;
+}
+
