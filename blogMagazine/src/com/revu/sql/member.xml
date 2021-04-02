@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Member">
+
+
+<insert id="join" parameterType="memberBean">
+		INSERT INTO MEMBER
+		VALUES(
+			#{member_id}, #{member_nickname}, #{member_pw}, #{member_pw_check}, #{member_email}, #{member_gender,jdbcType=VARCHAR}, #{member_birth,jdbcType=VARCHAR}, 
+			#{member_hp,jdbcType=VARCHAR}, #{member_address,jdbcType=VARCHAR}, #{member_blogmail,jdbcType=VARCHAR}, #{member_address_detail,jdbcType=VARCHAR}, #{member_address_etc,jdbcType=VARCHAR},
+			#{member_active_place,jdbcType=VARCHAR}
+		)
+	</insert>
+
+
+<select id="login" parameterType="HashMap" resultType="HashMap">
+		SELECT MEMBER_ID, MEMBER_PW FROM MEMBER
+		WHERE MEMBER_ID = #{id} AND MEMBER_PW = #{pw}
+	
+</select>
+
+
+
+<select id="getMemberinfo" parameterType="string" resultType="memberBean">
+		SELECT * FROM MEMBER WHERE MEMBER_ID = #{member_id}
+</select>
+
+
+<select id="checkid" parameterType="string" resultType="_int">
+		SELECT COUNT(*) FROM MEMBER WHERE MEMBER_ID = #{id}
+</select>
+
+
+	
+</mapper>
